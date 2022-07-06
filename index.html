@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Briefing</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./weather.css">
+</head>
+<body>
+    <main id="mainContainer">
+
+        <div id="search-bar" class="flex-box "> 
+            <input type="text" class="search-input" placeholder="Enter a Location">
+            <button class="searchbtn">Search</button>
+        </div>
+
+        <section class="leftDisplay container column ">
+            <div id="top-left-card" class="card">
+                <div class="cardheader">
+                    <p id="location"><i class="fa-solid fa-location-pin"></i> Fishers</p>
+                </div>
+                <div class="cardbody">
+                    <div><i class="fas fa-cloud-sun-rain"></i></div>
+                    <span class="temp">85°F</span>
+                    <p class="curren-date">Wednesday July 6, 2022</p>
+
+                </div>
+            </div>
+
+            <div id="middle-left-card" class="card">
+                <div class="cardheader">
+                    <div class="cardbody">
+                        <p class="uv-index">UV Index: 9</p>
+                        <p class="uv-rating">UV Rating: High</p>
+                    </div>
+                  
+                </div>
+            </div>
+
+            <div id="Bottom-left-card" class="card">
+                <div class="cardheader">
+                    <div class="cardbody">
+                        <div><b>💨 </b>Wind Speed :&nbsp&nbsp&nbsp<span id="wind">4.16</span></div>
+                        <div><b>🌅 </b>Sun Rise :&nbsp&nbsp&nbsp<span id="sunrise">6:23 am</span></div>
+                        <div><b>🌄 </b>Sun Set :&nbsp&nbsp&nbsp<span id="sunset">9:00 pm</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+    <script src="https://kit.fontawesome.com/0e452b6c8c.js" crossorigin="anonymous"></script>
+</body>
 </html>
