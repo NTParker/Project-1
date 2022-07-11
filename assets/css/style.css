@@ -1,0 +1,121 @@
+
+.navbargif {
+    background-image: url('../imgs/Rain.gif');
+    background-size: auto;
+    /* height: 100vh;*/
+    padding: 0;
+    margin: 0;
+}
+
+.Sun {
+    background-image: url('../imgs/SunnyDay.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    object-fit: contain;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.Rain {
+    background-image: url('../imgs/Rain.png');
+    background-size: auto;
+    /* height: 100vh;*/
+    padding: 0;
+    margin: 0;
+}
+.Storm {
+    
+    background-image: url('../imgs/Storm.gif');
+    background-size: auto;
+    /* height: 100vh;*/
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.Fog {
+    background-image: url('../imgs/Rain.gif');
+    background-size: auto;
+    /* height: 100vh;*/
+    padding: 0;
+    margin: 0;
+}
+
+
+.Snow {
+    background-image: url('../imgs/Rain.gif');
+    background-size: auto;
+    /* height: 100vh;*/
+    padding: 0;
+    margin: 0;
+}
+
+.Cloud {
+    background-image: url('../imgs/Rain.gif');
+    background-size: auto;
+    /* height: 100vh;*/
+    padding: 0;
+    margin: 0;
+}
+
+.weekdayTitle {
+    background-color: #f1ae1a;
+    color: #0a3562;
+    font-weight: bolder;
+    text-align: center;
+    width: 100%;
+    border-bottom:5px solid lightgray;
+}
+
+.weekday {
+    background-color: #577397;
+    border:  5px solid lightgray;
+    /* color: #0a3562;
+    font-weight: bolder;*/
+    text-align: center;
+    height: 350px;
+}
+
+
+.highTemp {
+    color: #0a3562;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+}
+.lowTemp {
+    color: #577397;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+}
+.temps{
+
+    background-color:white;
+       height: 60px
+
+}
+#iconimage{
+
+    height:200px;
+}
+.rainChance {
+    height: auto;
+    background-color: #0a3562;
+    color: white;
+    font-weight: bolder;
+}
+
+html,body {
+    background-image: linear-gradient(#577397, white);
+    height:100%
+}
+
+#ChosenCity {
+    border: 5px solid lightgray;
+}
+#CurrentLocation {
+    font-weight: bolder;
+}
