@@ -1,4 +1,5 @@
 
+
 .navbargif {
     background-image: url('../imgs/Rain.gif');
     background-size: auto;
@@ -119,3 +120,8 @@ html,body {
 #CurrentLocation {
     font-weight: bolder;
 }
+ 
+#map {
+  height: 360px;
+}
+
