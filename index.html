@@ -12,20 +12,19 @@
     <script src="Scripts/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <!--<link rel="stylesheet" href="./weather.css">-->
-    <script src="assets/js/script.js"></script>
+    <script src="./assets/js/script.js" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href="assets/css/style.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/0e452b6c8c.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <script src="./assets/js/script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark">
+    <nav class="navbar navbar-expand-lg bg-light">
         <div id="" class="container-fluid">
-            <a class="navbar-brand">Weather</a>
+            <a class="">Weather</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,165 +32,49 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="City and State or Zip" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input class="form-control me-2" autoComplete="home city" id="searchvalue"  type="search" placeholder="Search City" aria-label="Search">
+                    <button class="btn btn-outline-success" id="searchbtn"type="button">Search</button>
                 </form>
             </div>
         </div>
     </nav>
    
     <main id="mainContainer" class="container-fluid">
-        <div style="padding-top:25px" class="row">
+        <section>
+            <div style="padding-left:125px ;padding-top: 25px" class="row">
 
-            <div id="middle-left-card" class="col-2 card">
-                <div class="cardheader">
-                    <div class="cardbody">
-                        <p class="uv-index">UV Index: 9</p>
-                        <p class="uv-rating">UV Rating: High</p>
+                <div  style="align-items: center; justify-content: center"id="ChosenCity" class="col-2 card">
+
+                </div>
+                <div style="align-items: center; justify-content: center" class="col-7 offset-1" id="Week">
+
+
+
+                    <div id="current-temp" class="weekday">
+
                     </div>
 
-                </div>
 
-            </div>
-          </div>
-        </div>
-
-
-
-            <div id="ChosenCity" class="col-7 offset-1 card">
-                <span class="" alt=""> </span>
-                <!--<div class="cardheader">
-                <p style="text-align:center">Current Location</p>
-            </div>-->
-                <div  style="height:150px">
-                    <p id="location"><i  class="fa-solid fa-location-pin"></i> <span id="CurrentLocation"></span>As of<span id="CurrentTime"></span></p>
-                    <div><i id="current-icon"></i></div>
-                    <span class="current-temp"></span>
-                    <p id="current-date"></p>
 
                 </div>
             </div>
+        </section>
+        <div style="padding-left: 125px;padding-top:50px" class="row">
+            <div id="map" class="col-2"></div>
+            <div class="col-7 offset-1 row weather-forecast" id="weather-forecast">
+
+            </div>
+           
         </div>
 
 
 
 
-        <div class="row">
-            <div id="Bottom-left-card" class="col-2 card">
-                <div class="cardheader">
-                    <div class="cardbody">
-                        <div><b>💨 </b>Wind Speed :&nbsp&nbsp&nbsp<span id="wind">4.16</span></div>
-                        <div><b>🌅 </b>Sun Rise :&nbsp&nbsp&nbsp<span id="sunrise">6:23 am</span></div>
-                        <div><b>🌄 </b>Sun Set :&nbsp&nbsp&nbsp<span id="sunset">9:00 pm</span></div>
-                    </div>
-                </div>
-            </div>
-            <div id="Week">
-                
-                <div class="row col-7 offset-1">
-
-                    <div class="weekday col">
-                        <p class="weekdayTitle">Sun</p>
-                        <div id="iconimage"></div>
-                        <div class="row temps">
-                            <div class="lowTemp col-6">60&#176;</div>
-                            <div class="highTemp col-6">72&#176;</div>
-                        </div>
-
-                        <footer class="row Chance">
-                            <div class="rainChance col">&#176;</div>
-
-                        </footer>
-                    </div>
-                    <div class="weekday col">
-                        <p class="weekdayTitle">Mon</p>
-                        <div id="iconimage"></div>
-                        <div class="row temps">
-                            <div class="lowTemp col-6">&#176;</div>
-                            <div class="highTemp col-6">&#176;</div>
-                        </div>
-
-                        <footer class="row Chance">
-                            <div class="rainChance col">&#176;</div>
-
-                        </footer>
-                    </div>
-                    <div class="weekday col">
-                        <p class="weekdayTitle">Tue</p>
-                        <div id="iconimage"></div>
-                        <div class="row temps">
-                            <div class="lowTemp col-6">&#176;</div>
-                            <div class="highTemp col-6">&#176;</div>
-                        </div>
-
-                        <footer class="row Chance">
-                            <div class="rainChance col">&#176;</div>
-
-                        </footer>
-                    </div>
-                    <div class="weekday col">
-                        <p class="weekdayTitle">Wed</p>
-                        <div id="iconimage"></div>
-                        <div class="row temps">
-                            <div class="lowTemp col-6">&#176;</div>
-                            <div class="highTemp col-6">&#176;</div>
-                        </div>
-
-                        <footer class="row Chance">
-                            <div class="rainChance col">&#176;</div>
-
-                        </footer>
-                    </div>
-                    <div class="weekday col">
-                        <p class="weekdayTitle">Thur</p>
-                        <div id="iconimage"></div>
-                        <div class="row temps">
-                            <div class="lowTemp col-6">&#176;</div>
-                            <div class="highTemp col-6">&#176;</div>
-                        </div>
-
-                        <footer class="row Chance">
-                            <div class="rainChance col">&#176;</div>
-
-                        </footer>
-                    </div>
-                    <div class="weekday col">
-                        <p class="weekdayTitle">Fri</p>
-                        <div id="iconimage"></div>
-                        <div class="row temps">
-                            <div class="lowTemp col-6">&#176;</div>
-                            <div class="highTemp col-6">&#176;</div>
-                        </div>
-
-                        <footer class="row Chance">
-                            <div class="rainChance col">&#176;</div>
-
-                        </footer>
-                    </div>
-
-                    <div class="weekday col">
-                        <p class="weekdayTitle">Sat</p>
-                        <div id="iconimage"></div>
-                        <div class="row temps">
-                            <div class="lowTemp col-6">&#176;</div>
-                            <div class="highTemp col-6">&#176;</div>
-                        </div>
-
-                        <footer class="row Chance">
-                            <div class="rainChance col">&#176;</div>
-
-                        </footer>
-                    </div>
-                </div>
-            </div>
-            </div>
-
-            <a id="map-link" href="" target="_blank"></a>
 
 
-            <!--</section>-->
 
-
+       
+    </main>
  
     
 
