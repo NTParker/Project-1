@@ -1,65 +1,9 @@
 
 
-.navbargif {
-    background-image: url('../imgs/Rain.gif');
-    background-size: auto;
-    /* height: 100vh;*/
-    padding: 0;
-    margin: 0;
+.day, .temp, #CurrentTime, #current-icon {
+    text-align: center;
 }
 
-.Sun {
-    background-image: url('../imgs/SunnyDay.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    object-fit: contain;
-    padding: 0;
-    margin: 0;
-    position: relative;
-}
-
-.Rain {
-    background-image: url('../imgs/Rain.png');
-    background-size: auto;
-    /* height: 100vh;*/
-    padding: 0;
-    margin: 0;
-}
-.Storm {
-    
-    background-image: url('../imgs/Storm.gif');
-    background-size: auto;
-    /* height: 100vh;*/
-    padding: 0;
-    margin: 0;
-
-}
-
-
-.Fog {
-    background-image: url('../imgs/Rain.gif');
-    background-size: auto;
-    /* height: 100vh;*/
-    padding: 0;
-    margin: 0;
-}
-
-
-.Snow {
-    background-image: url('../imgs/Rain.gif');
-    background-size: auto;
-    /* height: 100vh;*/
-    padding: 0;
-    margin: 0;
-}
-
-.Cloud {
-    background-image: url('../imgs/Rain.gif');
-    background-size: auto;
-    /* height: 100vh;*/
-    padding: 0;
-    margin: 0;
-}
 
 .weekdayTitle {
     background-color: #f1ae1a;
@@ -67,14 +11,13 @@
     font-weight: bolder;
     text-align: center;
     width: 100%;
-    border-bottom:5px solid lightgray;
+    border-bottom: 5px solid lightgray;
 }
 
 .weekday {
     background-color: #577397;
     border:  5px solid lightgray;
-    /* color: #0a3562;
-    font-weight: bolder;*/
+
     text-align: center;
     height: 350px;
 }
@@ -82,13 +25,13 @@
 
 .highTemp {
     color: #0a3562;
-    font-size: 50px;
+    font-size: 24px;
     font-weight: bolder;
     text-align: center;
 }
 .lowTemp {
     color: #577397;
-    font-size: 25px;
+    font-size: 12px;
     font-weight: bolder;
     text-align: center;
 }
@@ -120,8 +63,22 @@ html,body {
 #CurrentLocation {
     font-weight: bolder;
 }
- 
+ #CityName {
+    font-weight: bolder;
+    font-size:25px;
+    color:white
+}
 #map {
   height: 360px;
 }
+.white {
+    color: white;
+}
+
+#weather-forecast {
+    justify-content: start;
+    align-items: none;
+
+}
+
 
