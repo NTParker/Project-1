@@ -109,11 +109,18 @@ function showWeatherData (data){
   
                     </div>
             <img src="http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon" class="w-icon">
-            <div class="col other">
-                <div class="lowtemp">Low - ${day.temp.night}&#176;F</div>
-                <div class="Hightemp">High - ${day.temp.day}&#176;F</div>
-            </div>
-            
+          
+                    <div class="row temps2">
+                <div class="lowTemp">${day.temp.night}&#176;F</div>
+                <div class="highTemp">${day.temp.day}&#176;F</div>
+                    </div>
+                        <div class="row  ">
+                            <div style="" class="white col">Humidity: ${humidity}%</div>
+                                <div class="white col">💨 ${wind_speed} mph</div>
+                                <div class="white col">🌅 ${window.moment(sunrise * 1000).format('HH:mm a')}</div>
+                                <div class="white col">🌄 ${window.moment(sunset * 1000).format('HH:mm a')}</div>
+                        </div>         
+                  
             `
         }else{
             otherDayForcast += `
@@ -123,10 +130,10 @@ function showWeatherData (data){
                         <div class="row temps">
                                 <div class="lowTemp col">${day.temp.min}&#176;F</div>
                                 <div class="highTemp col">${day.temp.max}&#176;F</div>
-                                <div style="padding-top:25px" class="white">Humidity: ${humidity}%</div>
-                                <div class="white">💨 ${wind_speed} mph</div>
-                                <div class="white">🌅 ${window.moment(sunrise * 1000).format('HH:mm a')}</div>
-                                <div class="white">🌄 ${window.moment(sunset * 1000).format('HH:mm a')}</div>
+                                <div style="padding-top:25px" class="white">Humidity: ${day.humidity}%</div>
+                                <div class="white">💨 ${day.wind_speed} mph</div>
+                                <div class="white">🌅 ${window.moment(day.sunrise * 1000).format('HH:mm a')}</div>
+                                <div class="white">🌄 ${window.moment(day.sunset * 1000).format('HH:mm a')}</div>
                           </div>
             
             </div>

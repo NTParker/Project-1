@@ -38,8 +38,14 @@
 .temps{
 
     background-color:white;
-       height: 60px
+       height: 60px;
+      
 
+}
+.temps2 {
+    background-color: white;
+    height: 60px;
+    margin:0px 0px 0px 0px;
 }
 #iconimage{
 
