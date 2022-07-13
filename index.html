@@ -22,17 +22,13 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div id="" class="container-fluid">
-            <a class="">Weather</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                </ul>
-                <form class="d-flex" role="search">
+<body class="min-vh-100">
+    <nav class=" container  min-vw-100 navbar-expand-lg  " id="nav-container">
+        <div id="navbar" class="col d-flex">
+            <h1 id="title">Weather </h1>
+            <div class=" navbar-collapse justify-content-end" id="navbarSupportedContent">
+                
+                <form class="d-flex " role="search" id="search-bar-container">
                     <input class="form-control me-2" autoComplete="home city" id="searchvalue"  type="search" placeholder="Search City" aria-label="Search">
                     <button class="btn btn-outline-success" id="searchbtn"type="button">Search</button>
                 </form>
@@ -40,32 +36,29 @@
         </div>
     </nav>
    
-    <main id="mainContainer" class="container-fluid">
-        <section>
-            <div style="padding-left:125px ;padding-top: 25px" class="row">
+    <main id="mainContainer" class="">
+        <section class="container">
+            <div class="row" id="current-weather-container">
 
-                <div  style="align-items: center; justify-content: center"id="ChosenCity" class="col-2 card">
-
+                <div  id="ChosenCity" class="col-lg-4 col-md-6 col-sm-10 col-xs-12  card">
                 </div>
-                <div style="align-items: center; justify-content: center" class="col-7 offset-1" id="Week">
 
-
-
-                    <div id="current-temp" class="weekday">
-
-                    </div>
-
-
-
+                <div  class="col-lg-8 col-md-6 col-sm-10 col-xs-12" id="Week">
+                    <div id="current-temp" class="weekday"></div>
                 </div>
             </div>
         </section>
-        <div style="padding-left: 125px;padding-top:50px" class="row">
-            <div id="map" class="col-2"></div>
-            <div class="col-7 offset-1 row weather-forecast" id="weather-forecast">
+        <section class="container" id="map-forecast-container"  >
+        <div  class="row">
+           
+            <div class=" col-12 row weather-forecast" id="weather-forecast">
 
             </div>
-           
+            
+        </section>
+        <div class="container" id="map-container">
+        <div id="map" class="col-12"></div>
+        </div>
         </div>
 
 
