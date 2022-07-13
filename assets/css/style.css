@@ -1,4 +1,29 @@
+/*Elements*/ 
+html,body {
+    background-image: linear-gradient(#0a3562, white);
+     
+}
 
+/*ids*/ 
+#search-bar-container {
+    padding-right: 30px;
+}
+#nav-container {
+    
+    padding: 20px;
+    background-color: #0a3562;
+}
+#navbar{
+    flex-wrap: wrap;
+}
+#title {
+    color: #ffffff;
+    padding-left: 30px;
+}
+
+#week{
+    padding-left: 20px;
+}
 
 .day, .temp, #CurrentTime, #current-icon {
     text-align: center;
@@ -47,24 +72,35 @@
     height: 60px;
     margin:0px 0px 0px 0px;
 }
-#iconimage{
 
-    height:200px;
-}
 .rainChance {
     height: auto;
     background-color: #0a3562;
     color: white;
     font-weight: bolder;
 }
+.white {
+    color: white;
+}
 
-html,body {
-    background-image: linear-gradient(#577397, white);
-    height:100%
+/*class*/ 
+
+#iconimage{
+
+    height:200px;
+}
+
+#current-weather-container {
+    padding: 40px 0;
+    
 }
 
 #ChosenCity {
+    background-image: linear-gradient(#ffffff,#577397);
+    color: #0a3562;
     border: 5px solid lightgray;
+    align-items: center;
+    justify-content: center;
 }
 #CurrentLocation {
     font-weight: bolder;
@@ -75,16 +111,98 @@ html,body {
     color:white
 }
 #map {
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
   height: 360px;
+  width: 90%;
 }
-.white {
-    color: white;
-}
-
 #weather-forecast {
+       
+    flex-wrap: nowrap;
     justify-content: start;
-    align-items: none;
-
+        align-items: none;
+        overflow-y: scroll; 
+}
+#map-container{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
 }
 
 
+
+@media screen and (min-width: 1775px) {
+    #weather-forecast {
+       height: 100vh;
+        justify-content: center;
+        align-items: none;
+        overflow-y: scroll; 
+    }
+}
+
+
+@media only screen and (max-width: 1400px){
+    #weather-forecast{
+        justify-content: start;
+        align-items: none;
+        overflow-x: scroll;
+    }
+}
+
+@media (max-width: 992px) {
+#navbar{
+    display: none;
+    justify-content: flex-start;
+}
+#title{
+    justify-content: space-around;
+    
+}
+
+
+.navbar {
+    display: flexbox;
+    justify-content: space-between;
+    color: #0a3562;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+}
+
+@media screen and (max-width: 767px){
+    
+    #weather-forcast{
+    margin-left:10px;
+    justify-content: center;
+    align-items: none;
+    overflow-y: scroll; 
+    }
+    #current-weather-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        
+    }
+
+    #ChosenCity{
+        padding: 20px 0;
+        width: 90%;
+        
+      }
+
+    #week{
+        padding: 20px 0;
+        width: 90%;
+    }
+    
+    #nav-container {
+        float: none !important;
+       
+    }
+   
+    
+  
+}
