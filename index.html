@@ -21,41 +21,40 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 </head>
-
 <body class="min-vh-100">
-    <nav class=" container  min-vw-100 navbar-expand-lg  " id="nav-container">
-        <div id="navbar" class="col d-flex">
-            <h1 id="title">Weather </h1>
-            <div class=" navbar-collapse justify-content-end" id="navbarSupportedContent">
-                
-                <form class="d-flex " role="search" id="search-bar-container">
-                    <input class="form-control me-2" autoComplete="home city" id="searchvalue"  type="search" placeholder="Search City" aria-label="Search">
+    <!--Nav Bar -->
+    <nav class=" container  min-vw-100   " id="nav-container">
+        <div id="navbar" class="row">
+            <h1 class="col" id="title">Weather </h1>
+                <form class="col " role="search" id="search-bar-container">
+                    <input class=" me-2" autoComplete="home city" id="searchvalue"  type="search" placeholder="Search City" aria-label="Search">
                     <button class="btn btn-outline-success" id="searchbtn"type="button">Search</button>
                 </form>
-            </div>
         </div>
     </nav>
    
     <main id="mainContainer" class="">
-        <section class="container">
+       
             <div class="row" id="current-weather-container">
-
+                <!--Current City Forecast -->
                 <div  id="ChosenCity" class="col-lg-4 col-md-6 col-sm-10 col-xs-12  card">
                 </div>
-
+                <!-- Searched City Forecast -->
                 <div  class="col-lg-8 col-md-6 col-sm-10 col-xs-12" id="Week">
                     <div id="current-temp" class="weekday"></div>
                 </div>
             </div>
-        </section>
+        
+        <!-- 7 day Forecast  -->
         <section class="container" id="map-forecast-container"  >
-        <div  class="row">
+        
            
-            <div class=" col-12 row weather-forecast" id="weather-forecast">
+            <div class="  weather-forecast" id="weather-forecast">
 
-            </div>
+            
             
         </section>
+        <!-- Map  -->
         <div class="container" id="map-container">
         <div id="map" class="col-12"></div>
         </div>

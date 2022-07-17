@@ -6,23 +6,81 @@ html,body {
 
 /*ids*/ 
 #search-bar-container {
-    padding-right: 30px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
-#nav-container {
-    
-    padding: 20px;
-    background-color: #0a3562;
-}
-#navbar{
-    flex-wrap: wrap;
-}
+
+
 #title {
+    display: flex;
+    justify-content: start;
     color: #ffffff;
     padding-left: 30px;
 }
 
-#week{
-    padding-left: 20px;
+#iconimage{
+
+    height:200px;
+}
+
+#current-weather-container {
+    padding: 40px 105px;
+    
+    
+}
+
+#ChosenCity {
+    display: flex;
+    background-image: linear-gradient(#ffffff,#577397);
+    color: #0a3562;
+    border: 5px solid lightgray;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#current-temp{
+    height: fit-content;
+}
+
+
+
+#CurrentLocation {
+    font-weight: bolder;
+}
+ #CityName {
+    font-weight: bolder;
+    font-size:25px;
+    color:white
+}
+#map {
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+  height: 360px;
+  width: 90%;
+}
+#weather-forecast {
+       display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+        align-items: none;
+        overflow-x: auto;  
+}
+#map-forecast-container{
+    display: flex;
+
+}
+#map-container{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/*class*/ 
+.weather-forecast-item.weekday {
+    height: 375px;
 }
 
 .day, .temp, #CurrentTime, #current-icon {
@@ -44,7 +102,7 @@ html,body {
     border:  5px solid lightgray;
 
     text-align: center;
-    height: 350px;
+    height: fit-content;
 }
 
 
@@ -83,119 +141,52 @@ html,body {
     color: white;
 }
 
-/*class*/ 
-
-#iconimage{
-
-    height:200px;
-}
-
-#current-weather-container {
-    padding: 40px 0;
-    
-}
-
-#ChosenCity {
-    background-image: linear-gradient(#ffffff,#577397);
-    color: #0a3562;
-    border: 5px solid lightgray;
-    align-items: center;
-    justify-content: center;
-}
-#CurrentLocation {
-    font-weight: bolder;
-}
- #CityName {
-    font-weight: bolder;
-    font-size:25px;
-    color:white
-}
-#map {
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-  height: 360px;
-  width: 90%;
-}
-#weather-forecast {
-       
-    flex-wrap: nowrap;
-    justify-content: start;
-        align-items: none;
-        overflow-x: auto; 
-}
-#map-container{
-    display: flex;
-    justify-content: center;
-    padding: 25px;
-}
 
 
 
-@media screen and (min-width: 1775px) {
-    #weather-forecast {
-    /*   height: 100vh;*/
-        justify-content: center;
-        align-items: none;
-        overflow-x: auto; 
-    }
-}
 
 
-@media only screen and (max-width: 1400px){
-    #weather-forecast{
-        justify-content: start;
-        align-items: none;
-        overflow-x: scroll;
-    }
-}
 
-@media (max-width: 992px) {
-#navbar{
-    display: none;
-    justify-content: flex-start;
-}
-#title{
-    justify-content: space-around;
-    
-}
+/* Media Queries  */
 
 
-.navbar {
-    display: flexbox;
-    justify-content: space-between;
-    color: #0a3562;
-    font-size: x-large;
-    font-weight: bolder;
-}
-
-}
-
-@media screen and (max-width: 767px){
+@media screen and (max-width: 840px){
     
     #weather-forcast{
-    margin-left:10px;
-    justify-content: center;
-    align-items: none;
-    overflow-y: scroll; 
-    }
-    #current-weather-container{
         display: flex;
         justify-content: center;
+       padding: 20px 0;
+       width: 90%;
+        }
+
+    #current-weather-container{
+        display: flex;
+     justify-content: center;
         align-items: center;
-        width: 90%;
-        
+        width: vw100;   
+        padding: 20px 0;
     }
+  
 
     #ChosenCity{
+        display: flex;
+        justify-content: center;
         padding: 20px 0;
         width: 90%;
         
       }
 
-    #week{
+    #Week{
+        
         padding: 20px 0;
         width: 90%;
+    }
+
+    #map-forcast-container{
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        width: vw100;
     }
     
     #nav-container {
@@ -203,6 +194,40 @@ html,body {
        
     }
    
-    
+
   
+}
+
+@media screen and (max-width: 441px){
+
+#title{
+    justify-content: center;
+   padding-top: 10px;
+}
+
+#search-bar-container{
+    justify-content: center;
+    padding: 5px 0;
+}
+#current-weather-container{
+    padding: 40px 25px 10px 25px;
+}
+#ChosenCity{
+    padding: 10px 0;
+    width: 100%;
+    }
+
+#Week{
+    width: 100%;
+    padding: 10px 0;
+
+}
+
+#map{
+    width: 90%;
+    margin-bottom: 10px;
+}
+#map-forecast-container{
+    width: 100%;
+}
 }

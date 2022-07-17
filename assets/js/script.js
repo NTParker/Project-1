@@ -124,7 +124,7 @@ function showWeatherData (data){
             `
         }else{
             otherDayForcast += `
-            <div class="col weather-forecast-item weekday">
+            <div class="weather-forecast-item weekday">
                 <div class="day weekdayTitle">${window.moment(day.dt*1000).format('ddd')}</div>
                 <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
                         <div class="row temps">
@@ -134,6 +134,7 @@ function showWeatherData (data){
                                 <div class="white">💨 ${day.wind_speed} mph</div>
                                 <div class="white">🌅 ${window.moment(day.sunrise * 1000).format('HH:mm a')}</div>
                                 <div class="white">🌄 ${window.moment(day.sunset * 1000).format('HH:mm a')}</div>
+                                 
                           </div>
             
             </div>
@@ -190,7 +191,7 @@ function showWeatherDataCurrentLoc(data) {
 
    
 }
-
+// Imports list of world city coordinates. 
 import cityData from "../../data/worldcities.js";
 
 document.getElementById("searchbtn").addEventListener("click", search);
@@ -241,6 +242,8 @@ function displayMap(loc) {
     }
   ).addTo(map);
 }
+
+//Sets geo cord pulled in from openweather 
 function getWeatherDataSearch(loc) {
 
 
