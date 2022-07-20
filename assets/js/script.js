@@ -108,9 +108,9 @@ function showWeatherData (data){
                 <div id="CityName" class="col CityName">
   
                     </div>
-<center>
+            <center>
             <img src="http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon" class="w-icon">
-          </center>
+            </center>
                     <div class="row temps2">
                 <div class="lowTemp">${day.temp.night}&#176;F</div>
                 <div class="highTemp">${day.temp.day}&#176;F</div>
@@ -126,8 +126,10 @@ function showWeatherData (data){
         }else{
             otherDayForcast += `
             <div class="weather-forecast-item weekday">
-                <div class="day weekdayTitle">${window.moment(day.dt*1000).format('ddd')}</div>
+                <div class="day weekdayTitle">${window.moment(day.dt * 1000).format('ddd')}</div>
+               <center>
                 <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
+               </center>
                         <div class="row temps">
                                 <div class="lowTemp col">${day.temp.min}&#176;F</div>
                                 <div class="highTemp col">${day.temp.max}&#176;F</div>
@@ -173,7 +175,7 @@ function showWeatherDataCurrentLoc(data) {
             
             <div style="height:auto">
                 <p id="location" style=""><i style="color:blue" class="fa-solid fa-location-pin"></i> <span id="CurrentLocation"></span></p>
-                <div id="current-icon"><img  src="http://openweathermap.org/img/wn//${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon"></div>
+                <div id="current-icon"><center><img  src="http://openweathermap.org/img/wn//${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon"></center></div>
                 <div class="day">Current</div>
                 <div class="temp">Low - ${day.temp.night}&#176;F</div>
                 <div class="temp">High - ${day.temp.day}&#176;F</div>
