@@ -108,8 +108,9 @@ function showWeatherData (data){
                 <div id="CityName" class="col CityName">
   
                     </div>
+<center>
             <img src="http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon" class="w-icon">
-          
+          </center>
                     <div class="row temps2">
                 <div class="lowTemp">${day.temp.night}&#176;F</div>
                 <div class="highTemp">${day.temp.day}&#176;F</div>
